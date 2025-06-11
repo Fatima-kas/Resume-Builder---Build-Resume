@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- custom css -->
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* fonts */
+        .font-poppins {
+            font-family: var(--font-poppins);
+        }
+
+        .font-manrope {
+            font-family: var(--font-manrope);
+        }
+
+        body {
+            font-size: 1.6rem;
+            font-family: var(--font-manrope);
+            background-color: #fdfdfd;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+            padding-bottom: 0.5rem;
+            background-color: #1E232E;
+            color: #fff;
+            padding: 15px;
+            margin: 0;
+        }
+
+        .step {
+            font-family: var(--font-manrope);
+            margin: 40px 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .step:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .step:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .step:nth-child(2) {
+            animation-delay: 0.9s;
+        }
+
+        .step:nth-child(1) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .step h3 {
+            color: #2196F3;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .step img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .faq-container {
+            background-color: #ffffff;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq h2 {
+            font-family: var(--font-manrope);
+            background-color: #1E232E;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+            padding-bottom: 0.5rem;
+            padding: 15px;
+        }
+
+        .faq h3 {
+            font-family: var(--font-manrope);
+            font-size: 1.8rem;
+            margin-top: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-align: justify;
+            color: #2196F3;
+            margin-top: 20px;
+        }
+
+        .faq p {
+            font-family: var(--font-manrope);
+            font-size: 1.7rem;
+            line-height: 1.6;
+            text-align: justify;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        a.button {
+            font-family: inherit;
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #2196F3;
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        a.button:hover {
+            background-color: #1976D2;
+        }
+
+        footer {
+            background-color: #1E232E;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer span {
+            color: #2196F3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="brand-and-toggler">
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/cv5.jpg" alt="Logo" class="navbar-brand-icon">
+                    <span class="navbar-brand-text">build <span>resume.</span></span>
+                </a>
+                <button class="navbar-toggler-btn" id="navToggle">
+                    <div class="bars">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </button>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="resume.html">Create_Resume</a>
+                <a href="tutorial.html">Tutorial</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <h2>How to Use the Resume Builder</h2>
+    <p
+        style="text-align:center; margin-top: 10px; background-color: #1E232E; color: #fff; font-family: var(--font-manrope); letter-spacing: 3px;">
+        - Follow this guide to create and download your professional resume.
+    </p>
+
+    <div class="step">
+        <h3>Step 1: Enter Your Details</h3>
+        <p>Fill in your name, contact information, and a short "About Me" section. Ensure everything is accurate.</p>
+        <img src="placeholder-step1.png" alt="Step 1 Screenshot">
+    </div>
+
+    <div class="step">
+        <h3>Step 2: Choose a Template</h3>
+        <p>Select from multiple templates to suit your style—modern, minimalistic, or bold.</p>
+        <img src="placeholder-step2.png" alt="Step 2 Screenshot">
+    </div>
+
+    <div class="step">
+        <h3>Step 3: Add Skills, Education & Experience</h3>
+        <p>Highlight your skills and list your educational qualifications and work experience clearly.</p>
+    </div>
+
+    <div class="step">
+        <h3>Step 4: Preview & Download</h3>
+        <p>Use the preview feature to ensure formatting looks great. Click download to save your resume as a PDF.</p>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-container">
+        <div class="faq">
+            <h2>FAQs</h2>
+
+            <h3>1. Can I edit my resume after downloading?</h3>
+            <p>&#10148; Yes! You can return anytime, update your details, and download a new version.</p>
+
+            <h3>2. Is this tool completely free?</h3>
+            <p>&#10148; Yes. Our resume builder is free for all users, especially designed for students.</p>
+
+            <h3>3. Do I need to sign up to use it?</h3>
+            <p>&#10148; No registration is required. Simply enter your details and download your resume instantly.</p>
+
+            <h3>4. Will my data be stored?</h3>
+            <p>&#10148; No, we don’t store any personal information. Everything stays on your device.</p>
+
+            <h3>5. Can I use this for job applications abroad?</h3>
+            <p>&#10148; Yes, our templates follow standard international resume formats that are suitable globally.</p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        Need help? <a href="contact.html" class="button">Contact Me</a> <br> <br> <br> <br> <br>
+    </div>
+
+    <footer class="footer bg-dark">
+        <div class="container">
+            <div class="footer-content text-center">
+                <p class="fs-15">&copy; Copyright 2022. All Rights Reserved - Noor Fatima Kas.
+                    <span>build.resume</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Toggle Script -->
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- custom css -->
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        title {
+            color: #fff;
+            background-color: #1E232E;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            border-color: #333;
+            background-color: #2196F3;
+            color: white;
+            padding: 12px;
+            border: 1px solid transparent;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        form button:hover {
+            background-color: transparent;
+            border-color: #333;
+            color: black;
+            background-color: #fff;
+        }
+
+        .info {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+        }
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-content h2 {
+            color: #1E232E;
+            margin-bottom: 10px;
+        }
+
+        .modal-content button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2196F3;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background-color: #1976D2;
+        }
+
+        .info-container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-container .info h3 {
+            color: #1E232E;
+            margin-top: 20px;
+        }
+
+        .info-container .info p {
+            margin: 5px 0;
+            color: #555;
+            word-break: break-word;
+        }
+
+        .info-container .info a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="brand-and-toggler">
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/cv5.jpg" alt="Logo" class="navbar-brand-icon">
+                    <span class="navbar-brand-text">build <span>resume.</span></span>
+                </a>
+                <button class="navbar-toggler-btn" id="navToggle">
+                    <div class="bars">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </button>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="resume.html">Create_Resume</a>
+                <a href="tutorial.html">Tutorial</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="about-cnt">
+            <form action="submit" class="cv-form" id="cv-form">
+                <div class="cv-form-blk">
+                    <div class="cv-form-row-title">
+                        <h3>contact me</h3>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <form name="submit-to-google-sheet">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Fullscreen Modal -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <h2>Message Sent!</h2>
+                <p>Thank you for reaching out. I'll get back to you soon.</p>
+                <button onclick="closeModal()">OK</button>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <div class="info">
+                <h3>Email: </h3>
+                <p>noorfatima.kas.t23071@sophiacollege.edu.in</p> <br>
+                <h3>LinkedIn: </h3>
+                <p><a href="https://linkedin.com/in/noor-fatima-kas"
+                        target="_blank">https://www.linkedin.com/in/noor-fatima-kas</a></p> <br>
+                <h3>GitHub: </h3>
+                <p><a href="https://github.com/Fatima-kas" target="_blank">https://github.com/Fatima-kas</a></p> <br>
+                <h3>Location: </h3>
+                <p> Mumbai, India</p> <br>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="loaderModal" class="modal">
+        <div class="modal-content">
+            <h2>Sending...</h2>
+            <p>Please wait while we send your message.</p>
+        </div>
+    </div>
+
+    <footer class="footer bg-dark">
+        <div class="container">
+            <div class="footer-content text-center">
+                <p class="fs-15">&copy;Copyright 2022. All Rights Reserved - Noor Fatima Kas. <span>build.resume</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toggle Script -->
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+    </script>
+    
+    <script>
+        function showLoader() {
+            document.getElementById("loaderModal").style.display = "flex";
+        }
+        function hideLoader() {
+            document.getElementById("loaderModal").style.display = "none";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.forms['submit-to-google-sheet'];
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyU0iUZ1h2Gtlv9_DIPIEOyOwuenpCEHByuRtF-UKGsiM7difWbxt-6ERWZc7nEhmtdNg/exec';
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                showLoader(); // show immediately
+
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        hideLoader();
+                        showModal();
+                        form.reset();
+                    })
+                    .catch(error => {
+                        hideLoader();
+                        console.error('Error!', error.message);
+                    });
+            });
+
+            function showModal() {
+                document.getElementById("successModal").style.display = "flex";
+            }
+
+            window.closeModal = function () {
+                document.getElementById("successModal").style.display = "none";
+            };
+        });
+
+    </script>
+
+</body>
+
+</html>
